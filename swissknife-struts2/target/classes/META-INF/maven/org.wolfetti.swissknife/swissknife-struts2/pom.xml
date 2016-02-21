@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.wolfetti.swissknife</groupId>
+		<artifactId>swissknife-parent</artifactId>
+		<version>1.0.7-SNAPSHOT</version>
+	</parent>
+	
+	<!-- ========== -->
+	<!-- PROPERTIES -->
+	<!-- ========== -->
+	<properties>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<!-- ================= -->
+	<!-- MAIN PROJECT DATA -->
+	<!-- ================= -->
+	<artifactId>swissknife-struts2</artifactId>
+	<groupId>org.wolfetti.swissknife</groupId>
+	<version>1.0.7-SNAPSHOT</version>
+	<name>swissknife-struts2</name>
+	<description>Swiss Knife Tool For Struts2 and JSON</description>
+	
+	<organization>
+  		<name>Wolfetti.org</name>
+  		<url>www.wolfetti.org/SwissKnife</url>
+	</organization>
+	
+	<issueManagement>
+		<system>Redmine</system>
+		<url>https://redmine.wolfetti.org/projects/swissknife-mailer</url>
+	</issueManagement>
+	
+	<!-- ===== -->
+	<!-- REPOS -->
+	<!-- ===== -->
+	<repositories>
+    	<repository>
+			<id>wolfetti_intranet</id>
+			<url>http://intranet.frijofabio.com/artifactory/wolfetti/</url>
+      	</repository>
+		<repository>
+			<id>public_releases</id>
+			<url>http://intranet.frijofabio.com/artifactory/public-releases/</url>
+		</repository>
+    </repositories>
+
+	<!-- ===== -->
+	<!-- BUILD -->
+	<!-- ===== -->
+	<build>
+		<sourceDirectory>${basedir}/src</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>${basedir}/src</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+		
+			<!-- FINDBUGS -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>2.5.2</version>
+				<configuration>
+					<findbugsXmlOutput>true</findbugsXmlOutput>
+					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
+					<xmlOutput>true</xmlOutput>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.3</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<!-- ========== -->
+	<!-- DIPENDENZE -->
+	<!-- ========== -->
+	<dependencies>
+		
+		<!-- COMPILE Dependencies -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>2.2.3</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.sun</groupId>
+					<artifactId>tools</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.wolfetti.swissknife</groupId>
+			<artifactId>swissknife-common</artifactId>
+			<version>1.0.7-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.wolfetti.swissknife</groupId>
+			<artifactId>swissknife-db</artifactId>
+			<version>1.0.7-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.1</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+		
+		
+		<!-- PROVIDED Dependencies -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.4</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>
