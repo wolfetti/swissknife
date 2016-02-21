@@ -1,21 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.wolfetti.swissknife</groupId>
-  <artifactId>swissknife-parent</artifactId>
-  <version>1.0.7-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <parent>
-    <groupId>com.frijofabio</groupId>
-    <artifactId>ff-base</artifactId>
-    <version>RELEASE</version>
-  </parent>
-  <modules>
-    <module>swissknife-common</module>
-    <module>swissknife-config</module>
-    <module>swissknife-db</module>
-    <module>swissknife-jasper</module>
-    <module>swissknife-mailer</module>
-    <module>swissknife-struts2</module>
-  </modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<!-- ================= -->
+	<!-- MAIN PROJECT DATA -->
+	<!-- ================= -->
+	<groupId>org.wolfetti.swissknife</groupId>
+	<artifactId>swissknife-lib</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	
+	<modules>
+		<module>swissknife-common</module>
+		<module>swissknife-config</module>
+		<module>swissknife-db</module>
+		<module>swissknife-jasper</module>
+		<module>swissknife-mailer</module>
+		<module>swissknife-struts2</module>
+	</modules>
+	
+	<organization>
+  		<name>Wolfetti.org</name>
+  		<url>www.wolfetti.org/SwissKnife</url>
+	</organization>
+	
+	<!-- ========== -->
+	<!-- PROPERTIES -->
+	<!-- ========== -->
+	<properties>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<!-- ===== -->
+	<!-- REPOS -->
+	<!-- ===== -->
+	<repositories>
+    	<repository>
+			<id>wolfetti_public_repository</id>
+			<url>http://intranet.frijofabio.com/artifactory/wolfetti/</url>
+      	</repository>
+		<repository>
+			<id>public_releases</id>
+			<url>http://intranet.frijofabio.com/artifactory/public-releases/</url>
+		</repository>
+    </repositories>
+
+	<!-- ===== -->
+	<!-- BUILD -->
+	<!-- ===== -->
+	<build>
+		<plugins>
+		
+			<!-- FINDBUGS -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>2.5.2</version>
+				<configuration>
+					<findbugsXmlOutput>true</findbugsXmlOutput>
+					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
+					<xmlOutput>true</xmlOutput>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.3</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

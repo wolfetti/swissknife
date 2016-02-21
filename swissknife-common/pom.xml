@@ -8,29 +8,12 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<!-- ========== -->
-	<!-- PROPERTIES -->
-	<!-- ========== -->
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-
 	<!-- ================= -->
 	<!-- MAIN PROJECT DATA -->
 	<!-- ================= -->
 	<artifactId>swissknife-common</artifactId>
 	<name>swissknife-common</name>
 	<description>Common utilities for the Swiss Knife library</description>
-
-	<organization>
-		<name>Wolfetti.org</name>
-		<url>www.wolfetti.org/SwissKnife</url>
-	</organization>
-
-	<issueManagement>
-		<system>Redmine</system>
-		<url>https://redmine.wolfetti.org/projects/swissknife-common</url>
-	</issueManagement>
 
 	<!-- ========== -->
 	<!-- DIPENDENZE -->
