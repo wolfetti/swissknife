@@ -20,8 +20,8 @@ package org.wolfetti.swissknife.db.dao;
 
 import java.sql.Savepoint;
 
-import org.wolfetti.swissknife.common.log.Log;
-import org.wolfetti.swissknife.common.log.LogFactory;
+import org.wolfetti.swissknife.common.logger.Log;
+import org.wolfetti.swissknife.common.logger.LogFactory;
 import org.wolfetti.swissknife.db.DbConnector;
 
 /**

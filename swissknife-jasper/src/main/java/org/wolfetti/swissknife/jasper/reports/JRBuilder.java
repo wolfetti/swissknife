@@ -5,8 +5,8 @@ import java.io.File;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
 
-import org.wolfetti.swissknife.common.log.Log;
-import org.wolfetti.swissknife.common.log.LogFactory;
+import org.wolfetti.swissknife.common.logger.Log;
+import org.wolfetti.swissknife.common.logger.LogFactory;
 import org.wolfetti.swissknife.common.utils.FileUtils;
 import org.wolfetti.swissknife.common.utils.exceptions.FileException;
 

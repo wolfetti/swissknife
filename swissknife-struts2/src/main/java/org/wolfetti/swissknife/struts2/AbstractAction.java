@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.ServletActionContext;
-import org.wolfetti.swissknife.common.log.Log;
-import org.wolfetti.swissknife.common.log.LogFactory;
+import org.wolfetti.swissknife.common.logger.Log;
+import org.wolfetti.swissknife.common.logger.LogFactory;
 import org.wolfetti.swissknife.common.utils.DateTimeUtils;
 
 import com.opensymphony.xwork2.ActionSupport;

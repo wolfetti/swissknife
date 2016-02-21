@@ -22,8 +22,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import org.apache.commons.configuration.Configuration;
-import org.wolfetti.swissknife.common.log.Log;
-import org.wolfetti.swissknife.common.log.LogFactory;
+import org.wolfetti.swissknife.common.logger.Log;
+import org.wolfetti.swissknife.common.logger.LogFactory;
 import org.wolfetti.swissknife.config.exceptions.ReloadFault;
 
 /**

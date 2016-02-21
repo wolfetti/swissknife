@@ -18,7 +18,7 @@
  */
 package org.wolfetti.swissknife.common;
 
-import org.wolfetti.swissknife.common.log.LogLevel;
+import org.wolfetti.swissknife.common.logger.LogLevel;
 
 /**
  * Swiss Knife Lib constants
@@ -243,7 +243,7 @@ public final class SKConstants {
 			/**
 			 * The name of class that will be tried as logging adapter if is not configured by user.
 			 */
-			public static final String SYSLOG_NAME = "org.wolfetti.swissknife.common.log.SystemLogger";
+			public static final String SYSLOG_NAME = "org.wolfetti.swissknife.common.logger.SystemLogger";
 
 			/**
 			 * Configuration prefix

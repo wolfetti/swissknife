@@ -32,8 +32,8 @@ import java.sql.Statement;
 
 import org.apache.commons.configuration.Configuration;
 import org.wolfetti.swissknife.common.SKConstants;
-import org.wolfetti.swissknife.common.log.Log;
-import org.wolfetti.swissknife.common.log.LogFactory;
+import org.wolfetti.swissknife.common.logger.Log;
+import org.wolfetti.swissknife.common.logger.LogFactory;
 import org.wolfetti.swissknife.db.exceptions.DbInitializationException;
 import org.wolfetti.swissknife.db.exceptions.DuplicatedKeyException;
 import org.wolfetti.swissknife.db.exceptions.IllegalOperationException;
