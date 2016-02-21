@@ -28,8 +28,8 @@ import org.wolfetti.swissknife.mailer.Mail;
  */
 public class NoHistoryHandler implements HistoryHandler {
 
-	/* (non-Javadoc)
-	 * @see com.emc2.general.mailer.history.IHistoryHandler#saveHistory(org.wolfetti.dbconnector.IDbConnector, com.emc2.general.mailer.entity.Mail)
+	/**
+	 * @{inheritDocs}
 	 */
 	@Override
 	public void save(DbConnector dbc, Mail m) {}

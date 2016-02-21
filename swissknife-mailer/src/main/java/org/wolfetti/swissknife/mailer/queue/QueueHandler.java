@@ -37,7 +37,7 @@ public interface QueueHandler {
 	 * @param mail
 	 * 	La mail da aggiungere alla coda.
 	 */
-	public void queue(DbConnector connector, Mail mail)
+	public void add(DbConnector connector, Mail mail)
 	throws MailerException;
 
 	/**
@@ -48,6 +48,6 @@ public interface QueueHandler {
 	 * @param mail
 	 * 	La mail da rimuovere dalla coda.
 	 */
-	public void unqueue(DbConnector connector, Mail mail)
+	public void remove(DbConnector connector, Mail mail)
 	throws MailerException;
 }

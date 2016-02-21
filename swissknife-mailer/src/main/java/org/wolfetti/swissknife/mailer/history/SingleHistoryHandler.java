@@ -36,8 +36,8 @@ public class SingleHistoryHandler implements HistoryHandler {
 	private final static String MAIL_SQL = "INSERT INTO `mail_sent` VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}',{7}, NOW())";
 	private final static String ATTACHMENT_SQL = "INSERT INTO `mail_sent_files` VALUES ('{0}','{1}','{2}',{3},?)";
 
-	/* (non-Javadoc)
-	 * @see com.emc2.general.mailer.IHistoryHandler#saveHistory(org.wolfetti.dbconnector.IDbConnector, com.emc2.general.mailer.entity.Mail)
+	/**
+	 * @{inheritDocs}
 	 */
 	@Override
 	public void save(DbConnector connector, Mail m)

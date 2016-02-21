@@ -38,11 +38,11 @@ public class SingleQueueHandler implements QueueHandler {
 	private final static String UNQUEUE_MAIL_SQL = "DELETE FROM `mail_queue` WHERE `id` = '{0}'";
 	private final static String UNQUEUE_ATTACHMENTS_SQL = "DELETE FROM `mail_queue_files` WHERE `mail_id` = '{0}'";
 
-	/* (non-Javadoc)
-	 * @see com.emc2.general.mailer.queue.IQueueHandler#queue(org.wolfetti.dbconnector.IDbConnector, com.emc2.general.mailer.entity.Mail)
+	/**
+	 * @{inheritDocs}
 	 */
 	@Override
-	public void queue(DbConnector connector, Mail m)
+	public void add(DbConnector connector, Mail m)
 	throws MailerException {
 		String to = StringUtils.fromListToCsv(m.getTo());
 		String cc = StringUtils.fromListToCsv(m.getCc());
@@ -76,11 +76,11 @@ public class SingleQueueHandler implements QueueHandler {
 		}
 	}
 
-	/* (non-Javadoc)
-	 * @see com.emc2.general.mailer.queue.IQueueHandler#unqueue(org.wolfetti.dbconnector.IDbConnector, com.emc2.general.mailer.entity.Mail)
+	/**
+	 * @{inheritDocs}
 	 */
 	@Override
-	public void unqueue(DbConnector connector, Mail m)
+	public void remove(DbConnector connector, Mail m)
 	throws MailerException {
 		try {
 			connector.write(SqlFormatter.format(UNQUEUE_MAIL_SQL, m.getId()));

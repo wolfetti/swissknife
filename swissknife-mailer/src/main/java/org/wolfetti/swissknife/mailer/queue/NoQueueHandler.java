@@ -28,15 +28,15 @@ import org.wolfetti.swissknife.mailer.Mail;
  */
 public class NoQueueHandler implements QueueHandler {
 
-	/* (non-Javadoc)
-	 * @see com.emc2.general.mailer.queue.IQueueHandler#queue(org.wolfetti.dbconnector.IDbConnector, com.emc2.general.mailer.entity.Mail)
+	/**
+	 * @{inheritDocs}
 	 */
 	@Override
-	public void queue(DbConnector connector, Mail mail) {}
+	public void add(DbConnector connector, Mail mail) {}
 
-	/* (non-Javadoc)
-	 * @see com.emc2.general.mailer.queue.IQueueHandler#unqueue(org.wolfetti.dbconnector.IDbConnector, com.emc2.general.mailer.entity.Mail)
+	/**
+	 * @{inheritDocs}
 	 */
 	@Override
-	public void unqueue(DbConnector connector, Mail mail) {}
+	public void remove(DbConnector connector, Mail mail) {}
 }

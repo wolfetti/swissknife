@@ -154,7 +154,7 @@ public abstract class AbstractMailer {
 	 */
 	protected void saveInQueue(Mail m)
 	throws MailerException {
-		queueHandler.queue(connector, m);
+		queueHandler.add(connector, m);
 	}
 
 	/**
@@ -165,7 +165,7 @@ public abstract class AbstractMailer {
 	 */
 	protected void removeFromQueue(Mail m)
 	throws MailerException {
-		queueHandler.unqueue(connector, m);
+		queueHandler.remove(connector, m);
 	}
 
 	/**
