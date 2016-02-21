@@ -1,4 +1,9 @@
+# Maven build files
 log/
 target/
 /**/log/
 /**/target/
+
+# OS junk files
+[Tt]humbs.db
+*.DS_Store
