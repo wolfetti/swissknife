@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.wolfetti.swissknife</groupId>
 		<artifactId>swissknife-lib</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.0</version>
 	</parent>
 	
 	<!-- ================= -->
@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>org.wolfetti.swissknife</groupId>
 			<artifactId>swissknife-common</artifactId>
-			<version>${project.parent.version}</version>
+			<version>1.0</version>
 		</dependency>
 	</dependencies>
 </project>
