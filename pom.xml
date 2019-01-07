@@ -21,8 +21,8 @@
     </modules>
 	
     <organization>
-        <name>Wolfetti.org</name>
-        <url>www.wolfetti.org/SwissKnife</url>
+        <name>Frijo Fabio Software Development</name>
+        <url>www.frijofabio.com</url>
     </organization>
 	
     <!-- ========== -->
@@ -37,12 +37,11 @@
     <!-- ===== -->
     <repositories>
         <repository>
-            <id>wolfetti_public_repository</id>
-            <url>http://intranet.frijofabio.com/artifactory/wolfetti/</url>
-        </repository>
-        <repository>
-            <id>public_releases</id>
-            <url>http://intranet.frijofabio.com/artifactory/public-releases/</url>
+            <id>ff_oss_repository</id>
+            <url>https://intranet.frijofabio.com/artifactory/oss-repo</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
     </repositories>
 
