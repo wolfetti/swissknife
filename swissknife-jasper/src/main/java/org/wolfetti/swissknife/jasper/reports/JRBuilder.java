@@ -72,6 +72,7 @@ public class JRBuilder {
 		
 		if(!jrxmlFile.exists()){
 			log.error("File " + path + " not exists!!");
+			return;
 		}
 		
 		log.trace("Building '" + name + "' ...");
